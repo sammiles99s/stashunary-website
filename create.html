@@ -45,7 +45,9 @@ document.querySelectorAll('[data-create-pick]').forEach(link=>link.addEventListe
  if(type&&!vision.value.trim())vision.value='I would like to create a custom '+type.toLowerCase()+'. ';
 }));
 updateCategory('card');
+let requestSubmitting=false;
 form.addEventListener('submit',e=>{
+ if(requestSubmitting){e.preventDefault();return;}
  const files=document.querySelector('#files').files;let bytes=0;for(const f of files)bytes+=f.size;
  if(bytes>10*1024*1024){e.preventDefault();status.textContent='Your files total more than 10 MB. Please select smaller files and try again.';return;}
  const choice=form.querySelector('input[name="product"]:checked');
@@ -53,6 +55,10 @@ form.addEventListener('submit',e=>{
  let hidden=form.querySelector('input[name="selected_price"]');
  if(!hidden){hidden=document.createElement('input');hidden.type='hidden';hidden.name='selected_price';form.appendChild(hidden);}
  hidden.value=choice.dataset.price;
+ requestSubmitting=true;
+ const sendButton=form.querySelector('button[type="submit"]');
+ sendButton.disabled=true;
+ sendButton.textContent='👑 REQUEST IN PROGRESS — PLEASE WAIT…';
  status.textContent='👑 Request submitted! Hang tight while STASHUNARY gathers your creation details. Please do not tap Send again; this may take up to 2 minutes.';
 });
 </script><a class="ask-stash-float" href="./ask-stash.html" aria-label="ASK STASH: Ask a question about STASHUNARY, no purchase required">💬 ASK STASH!</a></body></html>
