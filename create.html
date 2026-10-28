@@ -19,6 +19,8 @@ function updateCategory(category){
  cardOptions.hidden=category!=='card';
  activityOptions.hidden=category!=='activity';
  sectionExplainer.hidden=category!=='activity';
+ cardOptions.querySelectorAll('input').forEach(input=>{input.disabled=category!=='card';});
+ activityOptions.querySelectorAll('input').forEach(input=>{input.disabled=category!=='activity';});
  const content={
  card:['💌 Choose Your Card Style','Pick a printable card or a LEVLD UP interactive digital card.'],
  activity:['🎨 Build Your Activity Book','Choose how many different activity sections you want. A section is an activity type, not a page.'],
