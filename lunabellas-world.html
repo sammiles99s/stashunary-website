@@ -11,12 +11,25 @@
 @media(prefers-reduced-motion:no-preference){.lunabella-click-feature a:hover .sparkle,.lunabella-click-feature a:focus-visible .sparkle,.lunabella-click-feature a.activated .sparkle{animation:luna-twinkle .75s ease-in-out both}@keyframes luna-twinkle{0%{opacity:0;transform:scale(.3) rotate(-20deg)}40%{opacity:1;transform:scale(1.3) rotate(20deg)}100%{opacity:0;transform:scale(.7) rotate(45deg)}}}
 @media(prefers-reduced-motion:reduce){.lunabella-click-feature *{animation:none!important;transition:none!important}.lunabella-click-feature a:hover .sparkle,.lunabella-click-feature a:focus-visible .sparkle{opacity:1}}
 @media(max-width:600px){.lunabella-click-feature{margin:0 10px 16px}.lunabella-click-feature a{border-radius:16px}}
-</style></head><body><header><a href="./index.html">← Back to STASHUNARY</a></header><main><section class="lunabella-click-feature" aria-label="Meet Lunabella">
+</style><style>
+/* Compact clickable Lunabella in the top-right header, preserving the full site below. */
+.luna-top-header{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:920px;margin:0 auto;padding:12px 18px}
+.luna-top-header .luna-back{font-size:clamp(14px,3.5vw,19px);line-height:1.35;flex:1;min-width:0}
+.luna-top-header .lunabella-click-feature{width:112px;height:105px;flex:0 0 112px;margin:0!important;position:relative}
+.luna-top-header .lunabella-click-feature>a{width:100%;height:100%;position:relative;display:block;overflow:hidden;border-radius:50% 50% 20% 20%;border:2px solid #f0b8ff;box-shadow:0 0 14px #d45affaa;background:#50128c}
+.luna-top-header .lunabella-click-feature img{position:absolute;width:215px!important;max-width:none;height:auto;right:-1px;top:-1px;display:block}
+.luna-top-header .lunabella-click-feature .glow{border-radius:inherit}
+.luna-top-header .lunabella-click-feature .sparkle{font-size:18px}
+.luna-top-header .lunabella-click-feature .s1{top:12%;right:15%}
+.luna-top-header .lunabella-click-feature .s2{top:48%;right:5%}
+.luna-top-header .lunabella-click-feature .s3{top:74%;right:50%}
+@media(max-width:390px){.luna-top-header{padding:10px 12px}.luna-top-header .lunabella-click-feature{width:96px;height:92px;flex-basis:96px}.luna-top-header .lunabella-click-feature img{width:188px!important}}
+</style></head><body><header class="luna-top-header"><a class="luna-back" href="./index.html">← Back to STASHUNARY</a><section class="lunabella-click-feature" aria-label="Meet Lunabella">
  <a href="#meet-lunabella" aria-label="Meet Lunabella: tap to read her story" id="luna-character-link">
   <img src="./lunabella-click-option-2.png" alt="Illustrated portrait of Lunabella in purple with butterflies and a Click Me invitation" width="1312" height="1199">
   <span class="glow" aria-hidden="true"></span><span class="sparkle s1" aria-hidden="true">✦</span><span class="sparkle s2" aria-hidden="true">✧</span><span class="sparkle s3" aria-hidden="true">✦</span>
  </a>
-</section><section id="meet-lunabella" aria-labelledby="meet-luna-heading" style="max-width:850px;margin:20px auto;padding:24px;background:#ffffff13;border:1px solid #e9baff;border-radius:20px;scroll-margin-top:18px">
+</section></header><main><section id="meet-lunabella" aria-labelledby="meet-luna-heading" style="max-width:850px;margin:20px auto;padding:24px;background:#ffffff13;border:1px solid #e9baff;border-radius:20px;scroll-margin-top:18px">
  <h2 id="meet-luna-heading" style="color:#ffe37a">💜 Meet Lunabella</h2>
  <p>Lunabella is a curious, adventurous little girl who loves numbers, letters, water, and exploring her world. She is autistic and primarily nonverbal. Our family is working toward an AAC device to support more ways for her to communicate.</p>
  <p>Safety and family awareness are central to our everyday journey. Lunabella may suddenly run toward something that interests her without recognizing danger, especially near water. Her siblings are learning about safety and inclusion alongside us, while adults remain responsible for supervision.</p>
