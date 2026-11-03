@@ -17,6 +17,18 @@
 .milestone-ticker .counter-label{margin-top:13px;font-weight:1000;letter-spacing:.14em;color:#ffe078}
 .milestone-ticker .brandline{font-size:clamp(11px,2vw,17px);font-weight:950;margin-top:18px;color:#76fff2}
 @media(prefers-reduced-motion:reduce){.milestone-ticker .digit.rolling span{animation:none}}
+</style><style>
+/* The approved ticker artwork IS the layout. Only the real numbers sit over its number window. */
+.milestone-art-ticker{max-width:1100px;margin:12px auto 35px;padding:0 12px;line-height:normal}
+.milestone-art-stage{position:relative;width:100%;overflow:hidden;border-radius:4%;filter:drop-shadow(0 0 15px #f5b62c80)}
+.milestone-art-stage>img{display:block;width:100%;height:auto}
+.milestone-art-count{position:absolute;left:14.2%;width:71.6%;top:56%;height:16.1%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1.2%;align-items:stretch;isolation:isolate}
+.milestone-art-count .digit{min-width:0;width:100%;height:100%;display:grid;place-items:center;overflow:hidden;border:2px solid #f9cb53;border-radius:12%;background:linear-gradient(180deg,#25112e 0%,#06050b 49%,#14101e 51%,#05030a 100%);color:#fff;font:1000 clamp(20px,7.3vw,83px)/1 system-ui,Arial,sans-serif;text-shadow:0 2px 5px #000;box-shadow:0 0 12px #ffd35a9c,inset 0 1px 7px #000}
+.milestone-art-count .digit span{display:block}
+.milestone-art-count .digit.rolling span{animation:milestone-roll .75s cubic-bezier(.2,.8,.2,1)}
+.milestone-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:800px){.milestone-art-count .digit{font-size:clamp(55px,6.6vw,105px)}}
+@media(prefers-reduced-motion:reduce){.milestone-art-count .digit.rolling span{animation:none}}
 </style></head><body>
 <main aria-label="STASHUNARY illustrated department homepage">
 <img src="./file_00000000dfe081fdaabe1335514b6194.png" alt="STASHUNARY colorful creative studio with eight illustrated departments, including Cards, Create, Learn, Resume Studio, Docs Business, Activity Packs and two future studios." width="799" height="1831" fetchpriority="high">
@@ -28,12 +40,7 @@
 <a class="hotspot activity-tile" style="left:51%;top:57.5%;width:46%;height:14.8%" href="./activity-packs.html" aria-label="Explore STASHUNARY Activity Packs"><img class="activity-art" src="./STASHUNARY_Activity_Packs_Tile-1.jpg" alt="" onerror="this.style.display='none'"><span class="activity-badge">🎨 📚 🧩<br>👑 STASHUNARY</span><strong>ACTIVITY<br>PACKS</strong><small>Kids • Teens • Adults<br>Ready-made or personalized</small><span class="activity-cta">EXPLORE PACKS →</span></a>
 <span class="hotspot inactive construction" style="left:2.5%;top:73%;width:46%;height:14.8%" aria-label="Future Studio 7 coming soon"></span>
 <span class="hotspot inactive construction" style="left:51%;top:73%;width:46%;height:14.8%" aria-label="Future Studio 8 coming soon"></span>
-</main><section class="luna-feature" aria-label="Lunabella's World autism awareness"><a href="./lunabellas-world.html" aria-label="Explore Lunabella's World"><img src="./a_vibrant_high_contrast_glossy_neon_cartoon_styl.png" alt="Lunabella wearing purple headphones in the colorful STASHUNARY Autism Awareness banner. All Are Welcome. All Are Included. All Are Equal." loading="lazy"></a></section><section class="community-feature" aria-label="Milestone Brands community spotlight"><a href="./our-people.html" aria-label="Meet our community: Our People Our Pride, Stronger Together" style="display:block;padding:0;background:none;border:0;box-shadow:none;border-radius:24px;overflow:hidden"><img src="./file_00000000934082309d8d47d88a7c7fd3.png" alt="Our People. Our Pride. Stronger Together. A Milestone Brands Community Spotlight, featuring entrepreneurs, local businesses and a handshake" style="display:block;width:100%;height:auto;border-radius:24px"></a></section><section class="milestone-ticker" aria-label="STASHUNARY recorded visitors">
-<div class="milestone-ticker-inner"><div class="eyebrow">👑 MILESTONE BRANDS PRESENTS • STASHUNARY.COM 👑</div>
-<h2>Every Big Thing Starts Small!</h2><p>Our community is just getting started. Thanks for growing with us!</p>
-<div class="digits" id="milestone-visit-digits" aria-hidden="true"></div>
-<div class="counter-label" id="milestone-visit-label" role="status" aria-live="polite">LOADING VISIT COUNT…</div>
-<div class="brandline">BUILT FOR THE LITTLE GUY. MADE FOR BIGGER THINGS.</div></div></section><footer>© STASHUNARY · A Milestone Brands creative venture · <a href="https://payhip.com/STASHUNARY">Shop our store</a></footer>
+</main><section class="luna-feature" aria-label="Lunabella's World autism awareness"><a href="./lunabellas-world.html" aria-label="Explore Lunabella's World"><img src="./a_vibrant_high_contrast_glossy_neon_cartoon_styl.png" alt="Lunabella wearing purple headphones in the colorful STASHUNARY Autism Awareness banner. All Are Welcome. All Are Included. All Are Equal." loading="lazy"></a></section><section class="community-feature" aria-label="Milestone Brands community spotlight"><a href="./our-people.html" aria-label="Meet our community: Our People Our Pride, Stronger Together" style="display:block;padding:0;background:none;border:0;box-shadow:none;border-radius:24px;overflow:hidden"><img src="./file_00000000934082309d8d47d88a7c7fd3.png" alt="Our People. Our Pride. Stronger Together. A Milestone Brands Community Spotlight, featuring entrepreneurs, local businesses and a handshake" style="display:block;width:100%;height:auto;border-radius:24px"></a></section><section class="milestone-ticker milestone-art-ticker" aria-label="STASHUNARY recorded visitors"><div class="milestone-art-stage"><img src="./file_00000000729c81fd925f41386e56167b.png" alt="Milestone Brands STASHUNARY visitor celebration artwork featuring the Milestone family of brands" loading="lazy"><div class="milestone-art-count" id="milestone-visit-digits" aria-hidden="true"></div><span class="milestone-sr-only" id="milestone-visit-label" role="status" aria-live="polite">Loading visitor count</span></div></section><footer>© STASHUNARY · A Milestone Brands creative venture · <a href="https://payhip.com/STASHUNARY">Shop our store</a></footer>
 <a class="ask-stash-float" href="./ask-stash.html" aria-label="ASK STASH: Ask a question about STASHUNARY, no purchase required">💬 ASK STASH!</a>
 <script>
 (function(){
