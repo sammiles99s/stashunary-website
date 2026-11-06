@@ -1,1 +1,27 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Games After Dark | STASHUNARY</title><style>*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#6327a8,#11051c 65%);color:white;font-family:system-ui,sans-serif;text-align:center;padding:30px 18px}main{max-width:760px;margin:10vh auto 0}h1{font-size:clamp(35px,8vw,76px);line-height:1.05;margin:20px 0;text-shadow:3px 4px #8e24aa}p{font-size:clamp(17px,3vw,24px);line-height:1.5}a{color:#ffe66d} .pill{display:inline-block;border:2px solid #ffdd55;border-radius:40px;padding:12px 22px;margin-top:20px;font-weight:900;text-decoration:none} .age{font-weight:1000;color:#ffdc56;letter-spacing:.1em}</style></head><body><main><div>👑 STASHUNARY 👑</div><h1>💀 GAMES AFTER DARK</h1><p>AWW HELL NAW! — A MESSY GAME! Our adults-only game room is getting ready. The public launch is not open yet.</p><div class="age">ADULTS ONLY • 18+</div><p><a class="pill" href="./index.html">← BACK TO STASHUNARY</a></p></main></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Games After Dark | STASHUNARY</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#6a1688,#22062f 50%,#090311);color:#fff;font-family:system-ui,Arial,sans-serif;text-align:center;padding:24px 15px}main{max-width:640px;margin:4vh auto;border:3px solid #ff43bf;border-radius:28px;padding:clamp(22px,5vw,48px) 18px;background:radial-gradient(circle at 20% 0%,#b72ea044,transparent 55%),#150a20;box-shadow:0 0 0 4px #ffd34388,0 0 35px #ef2fc466}.crown{font-size:42px}h1{font-size:clamp(32px,7vw,58px);line-height:1.05;margin:15px 0;color:#ff65d2;text-shadow:2px 3px #670c69}.sub{font-size:clamp(17px,3vw,23px);font-weight:850;line-height:1.4}.warning{color:#ffe66d;font-weight:950;letter-spacing:.1em}form{margin:25px auto 12px;max-width:440px}label{display:block;font-weight:900;margin-bottom:12px;font-size:18px}.date-fields{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:9px}select,input{min-width:0;width:100%;font:700 17px system-ui;border:2px solid #ffbfe8;border-radius:12px;padding:13px 8px;background:#fff;color:#20072d}button{cursor:pointer;width:100%;margin-top:18px;border:0;border-radius:50px;padding:16px;font:1000 18px system-ui;color:#230526;background:linear-gradient(90deg,#ffdb3b,#ff4fc2);box-shadow:0 0 20px #ff44c666}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:4px solid #7dfcff;outline-offset:3px}.message{min-height:24px;font-weight:850;line-height:1.5}.denied{color:#ffd65b}.fine{font-size:13px;line-height:1.5;color:#e8c9e9}.back{display:inline-block;color:#ffe66d;margin:20px 0;font-weight:800}.hidden{display:none!important}.game-name{font-size:clamp(28px,7vw,52px);font-weight:1000;color:#ffe66d;text-shadow:2px 3px #ab2077}
+</style></head><body><main>
+<div class="crown">👑</div><div class="warning">STASHUNARY • ADULTS ONLY • 18+</div>
+<section id="gate"><h1>HOLD UP! 🔥</h1><p class="sub">BEFORE YOU BRING THE MESS...<br>LET'S CHECK YOUR BIRTHDAY!</p>
+<form id="age-form" novalidate><label for="birth-month">ENTER YOUR DATE OF BIRTH</label><div class="date-fields"><select id="birth-month" aria-label="Birth month" required><option value="">Month</option></select><select id="birth-day" aria-label="Birth day" required><option value="">Day</option></select><input id="birth-year" type="number" inputmode="numeric" min="1900" max="9999" placeholder="Year" aria-label="Birth year" required></div><button type="submit">🔥 VERIFY AGE & ENTER →</button></form><p id="age-message" class="message" role="status" aria-live="polite"></p><p class="fine">This is a self-reported age check, not identity verification. Your birthday is not sent to our servers or saved by this page.</p></section>
+<section id="adult-content" class="hidden"><h1>WELCOME TO AFTER DARK! 💀</h1><div class="game-name">AWW HELL NAW!</div><p class="sub">A MESSY GAME! • BRING YOUR CREW • BRING THE CHAOS</p><p>Our adult game room is being prepared for public launch. Stay tuned!</p></section>
+<a class="back" href="./index.html">← BACK TO STASHUNARY</a></main>
+<script>
+(function(){
+const month=document.getElementById('birth-month'),day=document.getElementById('birth-day'),year=document.getElementById('birth-year'),msg=document.getElementById('age-message');
+for(let m=1;m<=12;m++){const o=document.createElement('option');o.value=String(m);o.textContent=new Date(2024,m-1,1).toLocaleString('en-US',{month:'long'});month.append(o)}
+for(let d=1;d<=31;d++){const o=document.createElement('option');o.value=String(d);o.textContent=String(d);day.append(o)}
+document.getElementById('age-form').addEventListener('submit',function(e){
+e.preventDefault();msg.textContent='';msg.className='message';
+const m=Number(month.value),d=Number(day.value),y=Number(year.value),now=new Date();
+if(!m||!d||!Number.isInteger(y)||y<1900||y>now.getFullYear()){msg.textContent='Please enter a valid date of birth.';return}
+const birth=new Date(y,m-1,d);
+if(birth.getFullYear()!==y||birth.getMonth()!==m-1||birth.getDate()!==d||birth>now){msg.textContent='Please enter a valid date of birth.';return}
+const age=now.getFullYear()-y-(now.getMonth()+1<m||(now.getMonth()+1===m&&now.getDate()<d)?1:0);
+if(age<18){msg.className='message denied';msg.textContent='SORRY! THIS SECTION IS FOR ADULTS 18 AND OLDER. Please return to STASHUNARY.';return}
+document.getElementById('gate').classList.add('hidden');document.getElementById('adult-content').classList.remove('hidden');
+});
+})();
+</script></body></html>
